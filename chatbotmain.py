@@ -211,7 +211,7 @@ def get_publisher(game_name: str) -> str:
     pattern = r"Publisher(?:s)?\s*(?:.*?)\s*(?P<publisher>[A-Za-z0-9 \-&.,]+)"
     error_text = "Page infobox has no publisher information."
     match = get_match(infobox_text, pattern, error_text)
-    return match.group("publisher").strip()
+    return match.group("publisher")#.strip()
 
 def get_release_date(game_name: str) -> str:
     """Gets the release date of the given game
